@@ -63,20 +63,20 @@ SetBackgroundColor 0 0 0 180
 
 Hide
 BaseType "Uncut "
-SetTextColor 20 240 240
-SetBorderColor 20 240 240
+#SetTextColor 20 240 240
+#SetBorderColor 20 240 240
 ItemLevel < 19
-PlayAlertSound 2 300
-PlayEffect Cyan
+#PlayAlertSound 2 300
+#PlayEffect Cyan
 #MinimapIcon 1 Cyan Triangle
 
 
 Hide
 BaseType "Uncut "
-SetTextColor 200 140 240 
-SetBorderColor 20 240 240
+#SetTextColor 200 140 240 
+#SetBorderColor 20 240 240
 ItemLevel = 19
-PlayEffect Cyan
+#PlayEffect Cyan
 #MinimapIcon 2 Brown Star
 
 Show
@@ -329,47 +329,47 @@ CustomAlertSound "26f8b9_sonic_ring_sound_effect.wav" 300
 
 
 # Not working!
-#Hide
-#Sockets > 0
-#Rarity Magic
-#SetBorderColor 0 0 200
-#SetFontSize 35
+Show
+Sockets > 0
+SetBorderColor 0 0 200
+SetFontSize 35
 
-#Hide
-#Quality > 0
-#Rarity Magic
-#SetBorderColor 0 0 200
-#SetFontSize 35
+Show
+Quality > 0
+SetBorderColor 0 0 200
+SetFontSize 35
 
 #--------------------------
 # OPTIONAL RULES
 #--------------------------
 # TO ENABLE RULES, REMOVE THE # AT THE START OF THE LINE
-
+s
 ### OPTIONAL RULE: Hide random bases
 # REMOVE THE BASES YOU --DO-- WANT TO SEE BEFORE SETTING TO HIDE
 
 Hide
-Rarity <= Magic
-Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "Focus"
-AreaLevel >= 65
+Rarity <= Rare
+Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Bow" "Crossbow" "Wand" "Sceptre" "Focus"
+#AreaLevel >= 65
 
 ### OPTIONAL RULE: REDUCES BACKGROUND ON LOW LEVEL BASES
 
- Hide
- Rarity <= Magic
- Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre"
- AreaLevel >= 65
- DropLevel <= 50
- SetBackgroundColor 0 0 0 125
+Hide
+Rarity <= Rare
+Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Bow" "Crossbow" "Wand" "Quarterstaff" "Sceptre" "Focus"
+AreaLevel >= 70
+DropLevel <= 70
+SetBackgroundColor 0 0 0 125
 
 #--------------------------
 # Meta
 #--------------------------
 
-# If this thing crashes, time to update your filter!
-# This is here to prevent people to use this filter for AGES. Expert items will get removed eventually
-# Get a new filter from www.filterblade.xyz
-
-Show
-BaseType == "Expert Laced Boots"
+#Show
+#Class "Quarterstaff"
+#SetTextColor 255 207 132
+#SetBorderColor 255 207 132
+#SetBackgroundColor 76 51 12
+#PlayAlertSound 2 300
+#PlayEffect Pink
+#MinimapIcon 1 White Circle
