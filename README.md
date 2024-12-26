@@ -358,9 +358,5 @@ AreaLevel >= 65
 # Meta
 #--------------------------
 
-# If this thing crashes, time to update your filter!
-# This is here to prevent people to use this filter for AGES. Expert items will get removed eventually
-# Get a new filter from www.filterblade.xyz
-
-Show
-BaseType == "Expert Laced Boots"
+#Show
+#BaseType == "Expert Laced Boots"
