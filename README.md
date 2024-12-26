@@ -1,16 +1,7 @@
 #===============================================================================================================
-# NeverSink's Indepth Loot Filter - for Path of Exile
+# Based on NeverSink's Indepth Loot Filter - for Path of Exile 2
 #===============================================================================================================
-# VERSION:  0.1.1
-# AUTHOR:   NeverSink
-#
-# This is a mini-filter designed for early PoE2 EA gameplay. I will eventually replace it with a full-fledged filter
-# With FilterBlade.xyz support. This filter focuses more on highlighting loot, rather than hiding
-#
-# TWITTER: @NeverSinkDev
-# DISCORD: https://discord.gg/mye6xhF
-# TWITCH:  https://www.twitch.tv/neversink
-# PATREON: https://www.patreon.com/Neversink
+# Strict
 
 #--------------------------
 # Overrides - Uniques, Valuables
