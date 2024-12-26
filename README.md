@@ -3,6 +3,9 @@
 #===============================================================================================================
 # Strict
 
+# Install: copy filter and sound (wav) files to C:/User/My Games/Path of Exile 2/
+# load filter in game (Options/Game/Item Filter - find file MakePoeGreatAgain-Strict.filter
+
 #--------------------------
 # Overrides - Uniques, Valuables
 #--------------------------
