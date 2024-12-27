@@ -1,8 +1,10 @@
 #===============================================================================================================
 # Based on NeverSink's Indepth Loot Filter - for Path of Exile 2
 #===============================================================================================================
-# Strict - endgame farming for Monk. That means only Qaurterstaff will show only Expert other bases hidden, except salvagable.
-
+# Strict 
+# V3.2 - Qaurterstaff Meta drop removed
+#      - Adjusted Salvagable visibility
+#
 # Install: copy filter and sound (wav) files to C:/User/My Games/Path of Exile 2/
 # load filter in game (Options/Game/Item Filter - find file MakePoeGreatAgain-Strict.filter
 
@@ -16,7 +18,6 @@ Rarity Unique
 SetTextColor 175 96 37 255
 SetBorderColor 175 96 37 255
 SetBackgroundColor 53 13 13 255
-#PlayAlertSound 3 300
 CustomAlertSound "Tfakenews.wav" 300
 PlayEffect Brown
 MinimapIcon 2 Brown Star
@@ -58,27 +59,13 @@ SetBackgroundColor 0 0 0 180
 
 Hide
 BaseType "Uncut "
-#SetTextColor 20 240 240
-#SetBorderColor 20 240 240
-ItemLevel < 19
-#PlayAlertSound 2 300
-#PlayEffect Cyan
-#MinimapIcon 1 Cyan Triangle
-
-
-Hide
-BaseType "Uncut "
-#SetTextColor 200 140 240 
-#SetBorderColor 20 240 240
-ItemLevel = 19
-#PlayEffect Cyan
-#MinimapIcon 2 Brown Star
+ItemLevel < 20
 
 Show
 BaseType "Uncut "
 SetTextColor 240 100 100 
 SetBorderColor 100 240 200
-ItemLevel = 20
+ItemLevel >= 20
 CustomAlertSound "Tlovemylife.wav" 300
 PlayEffect Cyan
 MinimapIcon 0 Red Star
@@ -149,11 +136,10 @@ PlayEffect Cyan Temp
 # Currency Tier A: Gemcutter, Annullment
 Show
 Class "Currency"
-BaseType "Gemcutter's Prism" "Orb of Annulment" "Orb of Chance"
+BaseType "Gemcutter's Prism" "Orb of Annulment" 
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35
-#PlayAlertSound 1 300
 CustomAlertSound "Tbongbong.wav" 300
 PlayEffect White
 MinimapIcon 1 White Circle
@@ -162,7 +148,18 @@ SetFontSize 40
 # Currency Tier B: Vaal, Chaos, Exalt, Exotic
 Show
 Class "Currency"
-BaseType "Vaal Orb" "Greater Jeweller's Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Exotic" "Exalted Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy" "Orb of Chance"
+BaseType "Orb of Chance" "Vaal Orb"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35
+CustomAlertSound "Tsoundsgood.wav" 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Greater Jeweller's Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Exotic" "Exalted Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
@@ -183,7 +180,7 @@ CustomAlertSound "Tthisguy.wav" 300
 PlayEffect White
 MinimapIcon 1 White Circle
 
-# Currency Tier C: Vaal, Chaos, Exalt, Exotic
+# Currency Tier C: Shard
 Show
 Class "Currency"
 BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Chance Shard"
@@ -192,6 +189,7 @@ SetTextColor 255 207 132
 SetBorderColor 255 207 132
 MinimapIcon 2 Grey Circle
 
+# Currency Tier D: Splinter, Artifact
 Show
 Class "Currency"
 BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact" 
@@ -220,27 +218,19 @@ BaseType "Simulacrum" " Tablet" "Breachstone" "Barya" "Ultimatum" " Fragment" "C
 SetTextColor 255 207 255
 SetBorderColor 255 207 255
 SetBackgroundColor 65 20 80
-PlayAlertSound 2 300
+CustomAlertSound "smw_1-up.wav" 300
 PlayEffect White
 MinimapIcon 1 White Square
 SetFontSize 40
 
+# Waystones
 Hide
 BaseType "Waystone"
-Rarity <= Rare
 DropLevel <= 74
-SetTextColor 255 255 255
-SetBorderColor 255 255 255
-#PlayAlertSound 4 300
-#CustomAlertSound "Tmexico.wav" 300
-#PlayEffect White
-#MinimapIcon 1 White Square
-SetFontSize 40
 
-Show
 # T11-12
+Show
 BaseType "Waystone"
-Rarity <= Rare
 DropLevel >= 75
 DropLevel < 77
 SetFontSize 45
@@ -250,27 +240,26 @@ CustomAlertSound "Tmexico.wav" 300
 PlayEffect White
 MinimapIcon 1 White Square
 
-Show
 # T13
+Show
 BaseType "Waystone"
 Rarity <= Rare
 DropLevel = 77
 SetFontSize 45
 SetTextColor 210 40 100 250
-SetBorderColor 160 10 100 250
+SetBorderColor 180 180 100 250
 CustomAlertSound "Tchina.wav" 300
 PlayEffect Yellow
 MinimapIcon 2 Brown Star
 
-
-Show
 # T14
+Show
 BaseType "Waystone"
 Rarity <= Rare
 DropLevel = 78
 SetFontSize 45
 SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
+SetBorderColor 255 250 0 255
 CustomAlertSound "Tchinabig.wav" 300
 PlayEffect Red
 MinimapIcon 0 Red Star
@@ -282,7 +271,7 @@ Rarity <= Rare
 DropLevel >= 79
 SetFontSize 45
 SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
+SetBorderColor 0 10 250 255
 SetBackgroundColor 240 240 240 255
 CustomAlertSound "Tamerica.wav" 300
 PlayEffect Red
@@ -322,13 +311,20 @@ CustomAlertSound "26f8b9_sonic_ring_sound_effect.wav" 300
 # Salvagable Items
 #--------------------------
 
-
 Show
+Class "Helmet" "Boots" "Gloves" 
 Sockets > 0
 SetBorderColor 0 0 200
 SetFontSize 35
 
 Show
+Class "Body" "Shields" 
+Sockets > 1
+SetBorderColor 0 0 200
+SetFontSize 35
+
+Show
+Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Staff" "Wand" "Sceptre" "Focus"
 Quality > 0
 SetBorderColor 0 0 200
 SetFontSize 35
@@ -358,12 +354,12 @@ DropLevel <= 70
 # Meta
 #--------------------------
 
-Show
-Class "Quarterstaff"
-DropLevel >= 77
-SetTextColor 250 207 132
-SetBorderColor 250 207 132
-SetBackgroundColor 76 51 12
-PlayAlertSound 2 300
-PlayEffect Pink
-MinimapIcon 1 White Circle
+#Show
+#Class "Quarterstaff"
+#DropLevel >= 77
+#SetTextColor 250 207 132
+#SetBorderColor 250 207 132
+#SetBackgroundColor 76 51 12
+#PlayAlertSound 2 300
+#PlayEffect Pink
+#MinimapIcon 1 White Circle
