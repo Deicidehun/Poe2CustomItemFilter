@@ -1,16 +1,11 @@
 #===============================================================================================================
-# NeverSink's Indepth Loot Filter - for Path of Exile
+# Based on NeverSink's Indepth Loot Filter - for Path of Exile 2
 #===============================================================================================================
-# VERSION:  0.1.1
-# AUTHOR:   NeverSink
-#
-# This is a mini-filter designed for early PoE2 EA gameplay. I will eventually replace it with a full-fledged filter
-# With FilterBlade.xyz support. This filter focuses more on highlighting loot, rather than hiding
-#
-# TWITTER: @NeverSinkDev
-# DISCORD: https://discord.gg/mye6xhF
-# TWITCH:  https://www.twitch.tv/neversink
-# PATREON: https://www.patreon.com/Neversink
+# Strict - endgame farming for Monk. That means only Qaurterstaff will show only Expert other bases hidden, except salvagable.
+
+# Install: copy filter and sound (wav) files to C:/User/My Games/Path of Exile 2/
+# load filter in game (Options/Game/Item Filter - find file MakePoeGreatAgain-Strict.filter
+
 
 #--------------------------
 # Overrides - Uniques, Valuables
@@ -328,7 +323,6 @@ CustomAlertSound "26f8b9_sonic_ring_sound_effect.wav" 300
 #--------------------------
 
 
-# Not working!
 Show
 Sockets > 0
 SetBorderColor 0 0 200
@@ -343,33 +337,33 @@ SetFontSize 35
 # OPTIONAL RULES
 #--------------------------
 # TO ENABLE RULES, REMOVE THE # AT THE START OF THE LINE
-
 ### OPTIONAL RULE: Hide random bases
 # REMOVE THE BASES YOU --DO-- WANT TO SEE BEFORE SETTING TO HIDE
 
 Hide
 Rarity <= Rare
 Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Bow" "Crossbow" "Wand" "Sceptre" "Focus"
-#AreaLevel >= 65
 
+#AreaLevel >= 77
 ### OPTIONAL RULE: REDUCES BACKGROUND ON LOW LEVEL BASES
 
 Hide
 Rarity <= Rare
 Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Bow" "Crossbow" "Wand" "Quarterstaff" "Sceptre" "Focus"
-AreaLevel >= 70
+AreaLevel >= 77
 DropLevel <= 70
-SetBackgroundColor 0 0 0 125
+
 
 #--------------------------
 # Meta
 #--------------------------
 
-#Show
-#Class "Quarterstaff"
-#SetTextColor 255 207 132
-#SetBorderColor 255 207 132
-#SetBackgroundColor 76 51 12
-#PlayAlertSound 2 300
-#PlayEffect Pink
-#MinimapIcon 1 White Circle
+Show
+Class "Quarterstaff"
+DropLevel >= 77
+SetTextColor 250 207 132
+SetBorderColor 250 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect Pink
+MinimapIcon 1 White Circle
